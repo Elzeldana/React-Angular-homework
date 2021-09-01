@@ -11,6 +11,11 @@
 html {
   background-color: #ecf9ff;
 }
+.menu {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+ }
 
 body {
   color: #272727;
@@ -37,7 +42,19 @@ img {
   height: 40vh;
   object-fit: cover;
 }
-
+.menu-btn{
+  color: rosybrown;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display:inline-block;  
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: burlywood;
+  font-size: larger;
+}
 .btn {
   color: #ffffff;
   padding: 0.8rem;
@@ -52,7 +69,7 @@ img {
   background: transparent;
 }
 
-.btn:hover {
+  .btn:hover {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -60,7 +77,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin-top: 50px;
   padding: 0;
 }
 
@@ -88,6 +105,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin-top: 5%;
 }
 
 .card_content {

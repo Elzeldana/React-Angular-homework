@@ -4,11 +4,11 @@
     console.log(peopleEndWithA);
     peopleEndWithA.forEach((x)=>{
         console.log(x);
-    });   
-//document.getElementById("all-names").addEventListener("click", renderPeople(data.peopleArray));
-document.getElementById("names-A").addEventListener("click", renderPeopleA(peopleEndWithA));
-    function renderPeople (peopleData) {
-    let gridList= document.getElementById("gridList");
+    }); 
+     let gridList= document.getElementById("gridList");     
+
+    let renderPeople =(peopleData) => { 
+     removeAllChildNodes(gridList);
         console.log(peopleData);
           peopleData.forEach(x => {          
           let listItem= `<li class="cards_item">
@@ -26,8 +26,8 @@ document.getElementById("names-A").addEventListener("click", renderPeopleA(peopl
           gridList.innerHTML+=listItem;
       });
     }
-    function renderPeopleA (peopleData) {
-    let gridList= document.getElementById("gridList");
+    let  renderPeopleA= (peopleData)=> {
+     removeAllChildNodes(gridList);
         console.log(peopleData);
           peopleData.forEach(x => {          
           let listItem= `<li class="cards_item">
@@ -45,6 +45,14 @@ document.getElementById("names-A").addEventListener("click", renderPeopleA(peopl
           gridList.innerHTML+=listItem;
       });
     }
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+  document.getElementById("all-names").addEventListener("click", ()=>{renderPeople(data.peopleArray)});
+  
+  document.getElementById("names-A").addEventListener("click", ()=>{ renderPeopleA(peopleEndWithA)});
     
         
     
